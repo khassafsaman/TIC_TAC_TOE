@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(182, 224, 224);
+  
+}
+
+/* Top game styling */
+.style,.result{
+  text-align: center;
+  margin-top: 10px;
+  font-family: sans-serif;
+  color:  #333;
+}
+
+/* Styling the entire div */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    margin:50px auto;
+    box-shadow: 10px 10px 5px -5px teal ;
+  } 
+
+  .cell {
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    cursor: pointer;
+    background-color:transparent;
+  }
+  
+  /* Button styling */
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button{
+    background-color: teal;
+    padding: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 10px;
+  }
+ 
+/* style win */
+  .winning-cell{
+    background-color: rgba(64, 167, 64, 0.555);
+  }
+
+  
