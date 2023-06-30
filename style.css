@@ -10,11 +10,16 @@ body{
 }
 
 /* Top game styling */
-.style,.result{
+.style,.result,.currentturn{
   text-align: center;
   margin-top: 10px;
   font-family: sans-serif;
   color:  #333;
+}
+.currentturn{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* Styling the entire div */

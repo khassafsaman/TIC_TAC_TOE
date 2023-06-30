@@ -1,10 +1,12 @@
 // player "X " first player
 let currentPlayer = "X";
+let currentTurn = "X";
 let gameEnded = false;
 
 const board = ["", "", "", "", "", "", "", "", ""];
 let ScoreX = 0, ScoreO = 0;
 const result = document.querySelector(".result");
+const currentTurnElement = document.getElementById("currentTurn");
 // X/O on click
 function placeMark(index) {
     if (board[index] === "" && !gameEnded) {
@@ -36,6 +38,8 @@ function placeMark(index) {
             gameEnded = true;
         } else {
             currentPlayer = currentPlayer === "X" ? "O" : "X";
+            currentTurn = currentPlayer;
+            currentTurnElement.innerText = currentTurn;
         }
     }
 }
@@ -67,13 +71,23 @@ function checkWin() {
 // reset
 function resetBoard() {
     currentPlayer = "X";
+    currentTurn = "X";
+    currentTurnElement.innerText = currentTurn;
     gameEnded = false;
     for (let i = 0; i < board.length; i++) {
         board[i] = "";
         document.getElementsByClassName("cell")[i].innerText = "";
     }
+
     clearWinningCells();
 }
+currentTurn = "X";
+currentTurnElement.innerText = currentTurn;
+resetBoard();
+
+
+
+
 
 // clearWinningCells
 function clearWinningCells() {
