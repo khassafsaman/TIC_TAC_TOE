@@ -81,12 +81,11 @@ function resetBoard() {
 
     clearWinningCells();
 }
+
+// player "X " first player
 currentTurn = "X";
 currentTurnElement.innerText = currentTurn;
 resetBoard();
-
-
-
 
 
 // clearWinningCells
